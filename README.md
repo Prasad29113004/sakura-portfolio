@@ -1,4 +1,4 @@
-# Prasad Nimje Portfolio
+# Sakura Portfolio
 
 Animated Japanese-inspired portfolio website featuring certifications, learning
 progress, projects, skills, resume, and contact information.
@@ -10,7 +10,7 @@ step.
 
 ## Publish to GitHub
 
-Create an empty public repository named `japanese-portfolio` under the GitHub
+Create an empty public repository named `sakura-portfolio` under the GitHub
 account `Prasad29113004`. Do not add a README, `.gitignore`, or license on the
 GitHub creation screen because this folder already contains its first commit.
 
@@ -29,7 +29,7 @@ the push.
 2. Choose **Code**, **Windows**, and a supported runtime stack.
 3. After creation, open **Deployment Center**.
 4. Select **GitHub** as the source and authorize the GitHub account.
-5. Choose `Prasad29113004`, the `japanese-portfolio` repository, and `main`.
+5. Choose `Prasad29113004`, the `sakura-portfolio` repository, and `main`.
 6. Save. Azure creates a GitHub Actions workflow and deploys the site.
 
 Every later push to `main` triggers a new Azure deployment automatically.
@@ -39,4 +39,3 @@ Every later push to `main` triggers a new Azure deployment automatically.
 Open this same project folder in Codex and request the change, including
 "commit and push it to GitHub." Codex can edit and verify the site, then push
 the new commit. Azure will publish it after the GitHub Actions run succeeds.
-
