@@ -42,6 +42,29 @@
       color: rgba(31, 36, 40, 0.72);
     }
 
+    .pathways-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .track-column {
+      border: 1px solid rgba(31, 36, 40, 0.12);
+      border-radius: 8px;
+      background: rgba(255, 250, 240, 0.62);
+      box-shadow: 0 12px 30px rgba(16, 24, 32, 0.08);
+      padding: 20px;
+    }
+
+    .track-head {
+      margin: 0 0 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+      color: var(--sumi);
+      font-size: 1.35rem;
+      line-height: 1.2;
+    }
+
     .milestone-list {
       position: relative;
       display: grid;
@@ -117,6 +140,10 @@
         padding: 26px;
       }
 
+      .pathways-grid {
+        grid-template-columns: 1fr;
+      }
+
       .milestone-item {
         padding-left: 30px;
       }
@@ -138,51 +165,109 @@
 
       <header class="analytics-head">
         <p class="kicker">Data Analytics</p>
-        <h1>Power BI Data Analyst Pathway</h1>
-        <p>A completed milestone roadmap covering core data preparation, transformation, modeling, and dashboard design skills in Power BI.</p>
+        <h1>Data Analytics Pathways</h1>
+        <p>Completed milestone roadmaps covering data preparation, dashboard design, and Python programming across Microsoft and IBM ecosystems.</p>
       </header>
 
-      <ol class="milestone-list" aria-label="Power BI completed milestones">
-        <li class="milestone-item">
-          <article class="milestone-card">
-            <h2>Preparing Data for Analysis with Microsoft Excel</h2>
-            <span class="milestone-meta">Completed 🌟</span>
-            <a class="button primary credential-link" href="https://www.coursera.org/account/accomplishments/verify/D4MIHN76Q243" target="_blank" rel="noopener noreferrer">Show credential ↗</a>
-          </article>
-        </li>
+      <section class="pathways-grid" aria-label="Data analytics dual-track pathways">
+        <div class="track-column">
+          <h2 class="track-head">Microsoft: Power BI Data Analyst</h2>
+          <ol class="milestone-list" aria-label="Microsoft Power BI milestones">
+            <li class="milestone-item">
+              <article class="milestone-card">
+                <h2>Preparing Data for Analysis with Microsoft Excel</h2>
+                <span class="milestone-meta">Completed 🌟</span>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="button primary credential-link">Show credential ↗</a>
+              </article>
+            </li>
 
-        <li class="milestone-item">
-          <article class="milestone-card">
-            <h2>Harnessing the Power of Data with Power BI</h2>
-            <span class="milestone-meta">Completed 🌟</span>
-            <a class="button primary credential-link" href="https://www.coursera.org/account/accomplishments/verify/HNJLM7R0PU1L" target="_blank" rel="noopener noreferrer">Show credential ↗</a>
-          </article>
-        </li>
+            <li class="milestone-item">
+              <article class="milestone-card">
+                <h2>Harnessing the Power of Data with Power BI</h2>
+                <span class="milestone-meta">Completed 🌟</span>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="button primary credential-link">Show credential ↗</a>
+              </article>
+            </li>
 
-        <li class="milestone-item">
-          <article class="milestone-card">
-            <h2>Extract, Transform and Load Data in Power BI</h2>
-            <span class="milestone-meta">Completed 🌟</span>
-            <a class="button primary credential-link" href="https://www.coursera.org/account/accomplishments/verify/TGH82GHC81QD" target="_blank" rel="noopener noreferrer">Show credential ↗</a>
-          </article>
-        </li>
+            <li class="milestone-item">
+              <article class="milestone-card">
+                <h2>Extract, Transform and Load Data in Power BI</h2>
+                <span class="milestone-meta">Completed 🌟</span>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="button primary credential-link">Show credential ↗</a>
+              </article>
+            </li>
 
-        <li class="milestone-item">
-          <article class="milestone-card">
-            <h2>Data Modeling in Power BI</h2>
-            <span class="milestone-meta">Completed 🌟</span>
-            <a class="button primary credential-link" href="https://www.coursera.org/account/accomplishments/verify/0889V6GPIWTO" target="_blank" rel="noopener noreferrer">Show credential ↗</a>
-          </article>
-        </li>
+            <li class="milestone-item">
+              <article class="milestone-card">
+                <h2>Data Modeling in Power BI</h2>
+                <span class="milestone-meta">Completed 🌟</span>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="button primary credential-link">Show credential ↗</a>
+              </article>
+            </li>
 
-        <li class="milestone-item">
-          <article class="milestone-card">
-            <h2>Creative Designing in Power BI</h2>
-            <span class="milestone-meta">Completed 🌟</span>
-            <a class="button primary credential-link" href="https://www.coursera.org/account/accomplishments/verify/00KJUHUMYJ8X" target="_blank" rel="noopener noreferrer">Show credential ↗</a>
-          </article>
-        </li>
-      </ol>
+            <li class="milestone-item">
+              <article class="milestone-card">
+                <h2>Creative Designing in Power BI</h2>
+                <span class="milestone-meta">Completed 🌟</span>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="button primary credential-link">Show credential ↗</a>
+              </article>
+            </li>
+          </ol>
+        </div>
+
+        <div class="track-column">
+          <h2 class="track-head">IBM: Data Science &amp; Analytics</h2>
+          <ol class="milestone-list" aria-label="IBM Data Science and Analytics milestones">
+            <li class="milestone-item">
+              <article class="milestone-card">
+                <h2>Excel Basics for Data Analysis</h2>
+                <span class="milestone-meta">Completed 🌟</span>
+                <a href="https://www.coursera.org/account/accomplishments/verify/ZSVSA3GK82KA" target="_blank" rel="noopener noreferrer" class="button primary credential-link">Show credential ↗</a>
+              </article>
+            </li>
+
+            <li class="milestone-item">
+              <article class="milestone-card">
+                <h2>Introduction to Data Analytics</h2>
+                <span class="milestone-meta">Completed 🌟</span>
+                <a href="https://www.coursera.org/account/accomplishments/verify/L1OLN1X3IHFA" target="_blank" rel="noopener noreferrer" class="button primary credential-link">Show credential ↗</a>
+              </article>
+            </li>
+
+            <li class="milestone-item">
+              <article class="milestone-card">
+                <h2>What is Data Science?</h2>
+                <span class="milestone-meta">Completed 🌟</span>
+                <a href="https://www.coursera.org/account/accomplishments/verify/9SD52C8F9ROZ" target="_blank" rel="noopener noreferrer" class="button primary credential-link">Show credential ↗</a>
+              </article>
+            </li>
+
+            <li class="milestone-item">
+              <article class="milestone-card">
+                <h2>Data Visualization and Dashboards with Excel and Cognos</h2>
+                <span class="milestone-meta">Completed 🌟</span>
+                <a href="https://www.coursera.org/account/accomplishments/verify/7FDIR3RZ95K5" target="_blank" rel="noopener noreferrer" class="button primary credential-link">Show credential ↗</a>
+              </article>
+            </li>
+
+            <li class="milestone-item">
+              <article class="milestone-card">
+                <h2>Python for Data Science, AI &amp; Development</h2>
+                <span class="milestone-meta">Completed 🌟</span>
+                <a href="https://www.coursera.org/account/accomplishments/verify/NXITYUCOSCU6" target="_blank" rel="noopener noreferrer" class="button primary credential-link">Show credential ↗</a>
+              </article>
+            </li>
+
+            <li class="milestone-item">
+              <article class="milestone-card">
+                <h2>Python Project for Data Science</h2>
+                <span class="milestone-meta">Completed 🌟</span>
+                <a href="https://www.coursera.org/account/accomplishments/verify/ZD3H2DUOSU4A" target="_blank" rel="noopener noreferrer" class="button primary credential-link">Show credential ↗</a>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </section>
     </div>
   </main>
 </body>
