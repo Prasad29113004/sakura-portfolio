@@ -42,6 +42,67 @@
       color: rgba(31, 36, 40, 0.72);
     }
 
+    .featured-showcase {
+      margin-bottom: 28px;
+      border: 1px solid rgba(193, 139, 45, 0.44);
+      border-radius: 8px;
+      background: linear-gradient(145deg, rgba(255, 250, 240, 0.95), rgba(193, 139, 45, 0.14));
+      box-shadow: 0 18px 42px rgba(193, 139, 45, 0.18);
+      padding: 26px;
+    }
+
+    .featured-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .featured-header h2 {
+      margin: 0;
+      color: var(--sumi);
+      font-size: clamp(1.2rem, 2.4vw, 1.7rem);
+      line-height: 1.2;
+    }
+
+    .featured-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 0 12px;
+      border: 1px solid rgba(193, 139, 45, 0.5);
+      border-radius: 8px;
+      color: #7a5417;
+      background: rgba(193, 139, 45, 0.16);
+      font-size: 0.82rem;
+      font-weight: 900;
+    }
+
+    .certificate-placeholder {
+      min-height: 240px;
+      margin-top: 18px;
+      display: grid;
+      place-items: center;
+      border: 2px dashed rgba(216, 74, 50, 0.35);
+      border-radius: 8px;
+      background: rgba(232, 138, 155, 0.1);
+      color: rgba(16, 24, 32, 0.62);
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-align: center;
+    }
+
+    .verification-link {
+      margin: 16px 0 0;
+      color: rgba(31, 36, 40, 0.74);
+      font-weight: 800;
+    }
+
+    .verification-link span {
+      color: var(--teal);
+    }
+
     .milestone-list {
       position: relative;
       display: grid;
@@ -113,23 +174,6 @@
       color: rgba(31, 36, 40, 0.72);
     }
 
-    .milestone-target::before {
-      background: var(--gold);
-      box-shadow: 0 0 0 3px rgba(193, 139, 45, 0.3);
-    }
-
-    .milestone-target .milestone-card {
-      border-color: rgba(193, 139, 45, 0.52);
-      background: linear-gradient(140deg, rgba(255, 250, 240, 0.94), rgba(193, 139, 45, 0.18));
-      box-shadow: 0 18px 40px rgba(193, 139, 45, 0.22);
-    }
-
-    .milestone-target .milestone-meta {
-      color: #7a5417;
-      border-color: rgba(193, 139, 45, 0.46);
-      background: rgba(193, 139, 45, 0.14);
-    }
-
     .credential-link {
       margin-top: 16px;
     }
@@ -163,6 +207,15 @@
         <h1>Cloud Progress Roadmap</h1>
         <p>Tracking coursework, practical cloud skills, and the final certification objective for Azure Fundamentals.</p>
       </header>
+
+      <section class="featured-showcase" aria-label="Featured certification showcase">
+        <div class="featured-header">
+          <h2>Official Microsoft Certification: AZ-900 Azure Fundamentals</h2>
+          <span class="featured-badge">Target Goal 🎯</span>
+        </div>
+        <div class="certificate-placeholder">Certificate Display Box</div>
+        <p class="verification-link">Verification Link: <span>[Pending Exam Verification]</span></p>
+      </section>
 
       <ol class="milestone-list" aria-label="Azure fundamentals milestones">
         <li class="milestone-item">
@@ -200,13 +253,6 @@
           </article>
         </li>
 
-        <li class="milestone-item milestone-target">
-          <article class="milestone-card">
-            <h2>Official Microsoft Certification: AZ-900 Azure Fundamentals</h2>
-            <span class="milestone-meta">Target Goal 🎯</span>
-            <p>Ultimate path objective: complete all milestones and schedule the official exam attempt.</p>
-          </article>
-        </li>
       </ol>
     </div>
   </main>
