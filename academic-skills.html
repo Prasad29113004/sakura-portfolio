@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic honors and core skills visual certificate gallery.">
+  <title>Academic Honors & Core Skills | Prasad Nimje</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .academic-page {
+      min-height: 100vh;
+      padding: 42px 18px;
+      background: var(--paper);
+    }
+
+    .academic-sheet {
+      width: min(1080px, 100%);
+      margin: 0 auto;
+      padding: 44px;
+      border: 1px solid rgba(31, 36, 40, 0.14);
+      border-radius: 8px;
+      background: var(--rice);
+      box-shadow: var(--shadow);
+    }
+
+    .academic-head {
+      margin-bottom: 28px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .academic-head h1 {
+      margin: 0;
+      color: var(--sumi);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.08;
+    }
+
+    .academic-head p {
+      max-width: 780px;
+      margin: 16px 0 0;
+      color: rgba(31, 36, 40, 0.72);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .gallery-card {
+      display: grid;
+      gap: 16px;
+      padding: 20px;
+      border: 1px solid rgba(31, 36, 40, 0.12);
+      border-radius: 8px;
+      background: rgba(255, 250, 240, 0.72);
+      box-shadow: 0 12px 30px rgba(16, 24, 32, 0.08);
+    }
+
+    .gallery-card h2 {
+      margin: 0;
+      color: var(--sumi);
+      font-size: 1.28rem;
+      line-height: 1.2;
+    }
+
+    .gallery-card p {
+      margin: 0;
+      color: rgba(31, 36, 40, 0.74);
+    }
+
+    .certificate-image {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid rgba(216, 74, 50, 0.22);
+      border-radius: 8px;
+      box-shadow: 0 10px 24px rgba(16, 24, 32, 0.1);
+      background: linear-gradient(145deg, rgba(255, 250, 240, 0.9), rgba(232, 138, 155, 0.1));
+    }
+
+    @media (max-width: 760px) {
+      .academic-sheet {
+        padding: 26px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="academic-page">
+    <div class="academic-sheet">
+      <a class="back-link" href="index.html">&larr; Back to Portfolio</a>
+
+      <header class="academic-head">
+        <p class="kicker">Honors & Publications</p>
+        <h1>Academic Honors & Core Skills</h1>
+        <p>Visual Certificate Gallery highlighting publication achievements, language learning, data science training, and government-recognized professional proficiency.</p>
+      </header>
+
+      <section class="gallery-grid" aria-label="Visual Certificate Gallery">
+        <article class="gallery-card">
+          <img class="certificate-image" src="assets/ijprems-paper.jpg" alt="IJPREMS Publication">
+          <h2>IJPREMS Research Publication</h2>
+          <p>Published paper: "Industry Based Support System for Vehicle Servicing Updatation Alert." Authored comprehensive research reports, developed project synopses, and conducted rigorous software testing and validation.</p>
+        </article>
+
+        <article class="gallery-card">
+          <img class="certificate-image" src="assets/swayam-japanese.jpg" alt="Japanese Language Certificate">
+          <h2>SWAYAM NPTEL: Japanese Text and Grammar</h2>
+          <p>Completed an 8-week certification via Banaras Hindu University. Acquired foundational knowledge of Japanese grammar, daily greetings, and basic conversational skills to support international communication.</p>
+        </article>
+
+        <article class="gallery-card">
+          <img class="certificate-image" src="assets/python-analytics.jpg" alt="Python Certificate">
+          <h2>SWAYAM NPTEL: Data Analytics with Python</h2>
+          <p>Mastered core Python programming fundamentals for data manipulation, visualization, and statistical analysis, complementing advanced Power BI capabilities.</p>
+        </article>
+
+        <article class="gallery-card">
+          <img class="certificate-image" src="assets/gcc-typing.jpg" alt="Typing Certificate">
+          <h2>GCC-TBC English Typing 40 WPM</h2>
+          <p>Government of Maharashtra certified data entry proficiency. Demonstrates high-speed, accurate typing skills essential for efficient coding, documentation, and data processing.</p>
+        </article>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
