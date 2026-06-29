@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Azure Fundamentals learning roadmap and certification milestones.">
+  <title>Azure Fundamentals Track | Prasad Nimje</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .azure-track {
+      min-height: 100vh;
+      padding: 42px 18px;
+      background: var(--paper);
+    }
+
+    .azure-sheet {
+      width: min(980px, 100%);
+      margin: 0 auto;
+      padding: 44px;
+      border: 1px solid rgba(31, 36, 40, 0.14);
+      border-radius: 8px;
+      background: var(--rice);
+      box-shadow: var(--shadow);
+    }
+
+    .azure-head {
+      margin-bottom: 28px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .azure-head h1 {
+      margin: 0;
+      color: var(--sumi);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.08;
+    }
+
+    .azure-head p {
+      max-width: 760px;
+      margin: 16px 0 0;
+      color: rgba(31, 36, 40, 0.72);
+    }
+
+    .milestone-list {
+      position: relative;
+      display: grid;
+      gap: 18px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .milestone-list::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 14px;
+      width: 2px;
+      background: linear-gradient(180deg, rgba(216, 74, 50, 0.6), rgba(35, 117, 121, 0.35));
+    }
+
+    .milestone-item {
+      position: relative;
+      padding-left: 40px;
+    }
+
+    .milestone-item::before {
+      content: "";
+      position: absolute;
+      top: 28px;
+      left: 7px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 2px solid var(--rice);
+      background: var(--teal);
+      box-shadow: 0 0 0 3px rgba(35, 117, 121, 0.25);
+    }
+
+    .milestone-card {
+      border: 1px solid rgba(31, 36, 40, 0.12);
+      border-radius: 8px;
+      background: rgba(255, 250, 240, 0.7);
+      box-shadow: 0 12px 30px rgba(16, 24, 32, 0.08);
+      padding: 24px;
+    }
+
+    .milestone-card h2 {
+      margin: 0;
+      color: var(--sumi);
+      font-size: 1.35rem;
+      line-height: 1.2;
+    }
+
+    .milestone-meta {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      margin-top: 14px;
+      padding: 0 12px;
+      border: 1px solid rgba(35, 117, 121, 0.25);
+      border-radius: 8px;
+      color: var(--teal);
+      background: rgba(35, 117, 121, 0.08);
+      font-size: 0.82rem;
+      font-weight: 900;
+    }
+
+    .milestone-card p {
+      margin: 14px 0 0;
+      color: rgba(31, 36, 40, 0.72);
+    }
+
+    .milestone-target::before {
+      background: var(--gold);
+      box-shadow: 0 0 0 3px rgba(193, 139, 45, 0.3);
+    }
+
+    .milestone-target .milestone-card {
+      border-color: rgba(193, 139, 45, 0.52);
+      background: linear-gradient(140deg, rgba(255, 250, 240, 0.94), rgba(193, 139, 45, 0.18));
+      box-shadow: 0 18px 40px rgba(193, 139, 45, 0.22);
+    }
+
+    .milestone-target .milestone-meta {
+      color: #7a5417;
+      border-color: rgba(193, 139, 45, 0.46);
+      background: rgba(193, 139, 45, 0.14);
+    }
+
+    .credential-link {
+      margin-top: 16px;
+    }
+
+    @media (max-width: 680px) {
+      .azure-sheet {
+        padding: 26px;
+      }
+
+      .milestone-item {
+        padding-left: 30px;
+      }
+
+      .milestone-list::before {
+        left: 10px;
+      }
+
+      .milestone-item::before {
+        left: 3px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="azure-track">
+    <div class="azure-sheet">
+      <a class="back-link" href="index.html">&larr; Back to Portfolio</a>
+
+      <header class="azure-head">
+        <p class="kicker">Azure Learning Path</p>
+        <h1>Cloud Progress Roadmap</h1>
+        <p>Tracking coursework, practical cloud skills, and the final certification objective for Azure Fundamentals.</p>
+      </header>
+
+      <ol class="milestone-list" aria-label="Azure fundamentals milestones">
+        <li class="milestone-item">
+          <article class="milestone-card">
+            <h2>Coursera: Essentials with Azure Fundamentals</h2>
+            <span class="milestone-meta">Completed (June 2026)</span>
+            <a
+              class="button primary credential-link"
+              href="https://coursera.org/account/accomplishments/verify/MYH5NB6NJEWU"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Show credential ↗</a>
+          </article>
+        </li>
+
+        <li class="milestone-item">
+          <article class="milestone-card">
+            <h2>Coursera: Secure &amp; Scalable Cloud Infrastructure</h2>
+            <span class="milestone-meta">In Progress ⏳</span>
+            <p>Learning containerization, AKS, and infrastructure scaling rules.</p>
+          </article>
+        </li>
+
+        <li class="milestone-item">
+          <article class="milestone-card">
+            <h2>Coursera: Managing Azure Infrastructure</h2>
+            <span class="milestone-meta">Upcoming 🔒</span>
+          </article>
+        </li>
+
+        <li class="milestone-item">
+          <article class="milestone-card">
+            <h2>Coursera: Preparing for the AZ-900 Exam</h2>
+            <span class="milestone-meta">Upcoming 🔒</span>
+          </article>
+        </li>
+
+        <li class="milestone-item milestone-target">
+          <article class="milestone-card">
+            <h2>Official Microsoft Certification: AZ-900 Azure Fundamentals</h2>
+            <span class="milestone-meta">Target Goal 🎯</span>
+            <p>Ultimate path objective: complete all milestones and schedule the official exam attempt.</p>
+          </article>
+        </li>
+      </ol>
+    </div>
+  </main>
+</body>
+</html>
