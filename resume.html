@@ -6,6 +6,54 @@
   <meta name="description" content="Printable resume page for Prasad Nimje.">
   <title>Prasad Nimje | Resume</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <style>
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 10mm;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-size: 11px;
+        line-height: 1.25;
+      }
+
+      .resume-sheet {
+        margin: 0 !important;
+        padding: 8mm !important;
+        max-width: none !important;
+        box-shadow: none !important;
+        transform: scale(0.96);
+        transform-origin: top left;
+        width: 104.2%;
+      }
+
+      .resume-head,
+      .resume-block,
+      .resume-item {
+        margin: 0 0 4mm !important;
+        padding: 0 !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      .resume-head h1,
+      .resume-block h2,
+      .resume-item h3 {
+        margin: 0 0 1.5mm !important;
+      }
+
+      .resume-head p,
+      .resume-block p,
+      .resume-item p {
+        margin: 1mm 0 !important;
+      }
+    }
+  </style>
 </head>
 <body class="resume-page">
   <main class="resume-sheet">
