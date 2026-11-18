@@ -872,6 +872,85 @@ svg {
   font-size: 1.06rem;
 }
 
+.email-contact {
+  align-content: center;
+}
+
+.email-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.email-address {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: var(--sumi);
+  font-size: 1.06rem;
+  font-weight: 900;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.email-address:hover,
+.email-address:focus-visible {
+  color: var(--vermilion);
+  outline: none;
+}
+
+.copy-email-button {
+  min-height: 38px;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 11px;
+  border: 1px solid rgba(35, 117, 121, 0.34);
+  border-radius: 8px;
+  color: var(--teal);
+  background: rgba(35, 117, 121, 0.08);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.copy-email-button svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.copy-email-button:hover,
+.copy-email-button:focus-visible {
+  border-color: var(--teal);
+  background: rgba(35, 117, 121, 0.16);
+  transform: translateY(-1px);
+  outline: 2px solid rgba(35, 117, 121, 0.22);
+  outline-offset: 2px;
+}
+
+.copy-email-button.is-copied {
+  color: #7a5417;
+  border-color: rgba(193, 139, 45, 0.48);
+  background: rgba(193, 139, 45, 0.14);
+}
+
+.copy-email-status {
+  min-height: 18px;
+  margin: 0;
+  color: var(--teal);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.copy-email-status.is-error {
+  color: var(--vermilion);
+}
+
 .site-footer {
   position: relative;
   z-index: 2;
@@ -1169,6 +1248,15 @@ svg {
 
   .resume-head h1 {
     font-size: 2.45rem;
+  }
+
+  .email-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .email-address {
+    width: 100%;
   }
 
   .site-footer {

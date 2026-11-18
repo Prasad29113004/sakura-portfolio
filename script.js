@@ -94,6 +94,71 @@ skillTags.forEach((tag, index) => {
   tag.style.setProperty("--i", index);
 });
 
+const copyEmailButton = document.querySelector(".copy-email-button");
+
+async function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    await navigator.clipboard.writeText(text);
+    return true;
+  }
+
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.setAttribute("readonly", "");
+  textArea.style.position = "fixed";
+  textArea.style.opacity = "0";
+  document.body.appendChild(textArea);
+  textArea.select();
+  textArea.setSelectionRange(0, textArea.value.length);
+
+  let copied = false;
+  try {
+    copied = document.execCommand("copy");
+  } catch {
+    copied = false;
+  }
+
+  document.body.removeChild(textArea);
+  return copied;
+}
+
+if (copyEmailButton) {
+  const card = copyEmailButton.closest(".email-contact");
+  const status = card?.querySelector(".copy-email-status");
+  const label = copyEmailButton.querySelector(".copy-email-label");
+  let resetTimer;
+
+  copyEmailButton.addEventListener("click", async () => {
+    const email = copyEmailButton.dataset.email || "";
+    window.clearTimeout(resetTimer);
+
+    try {
+      const copied = await copyText(email);
+
+      if (!copied) {
+        throw new Error("Clipboard copy unavailable");
+      }
+
+      copyEmailButton.classList.add("is-copied");
+      label.textContent = "Copied!";
+      status.textContent = "Email copied successfully!";
+      status.classList.remove("is-error");
+    } catch {
+      copyEmailButton.classList.remove("is-copied");
+      label.textContent = "Try Again";
+      status.textContent = "Copy unavailable. Please select the email address manually.";
+      status.classList.add("is-error");
+    }
+
+    resetTimer = window.setTimeout(() => {
+      copyEmailButton.classList.remove("is-copied");
+      label.textContent = "Copy Email";
+      status.textContent = "";
+      status.classList.remove("is-error");
+    }, 3000);
+  });
+}
+
 window.addEventListener("scroll", updateScrollEffects, { passive: true });
 window.addEventListener("resize", updateScrollEffects);
 
