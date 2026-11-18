@@ -429,6 +429,42 @@ svg {
   margin-top: 16px;
 }
 
+.experience-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.experience-heading .eyebrow {
+  margin-bottom: 10px;
+}
+
+.experience-heading h3 {
+  margin-bottom: 0;
+}
+
+.experience-meta {
+  flex: 0 1 360px;
+  margin: 0 !important;
+  color: var(--teal) !important;
+  font-weight: 800;
+  text-align: right;
+}
+
+.experience-list,
+.focus-list {
+  display: grid;
+  gap: 10px;
+  margin: 24px 0 0;
+  padding-left: 20px;
+}
+
+.experience-list li,
+.focus-list li {
+  padding-left: 4px;
+}
+
 .seal-panel {
   position: relative;
   min-height: 360px;
@@ -643,6 +679,11 @@ svg {
 
 .study-card p:last-of-type {
   color: rgba(255, 250, 240, 0.76);
+}
+
+.study-card .focus-list {
+  margin-top: 0;
+  color: rgba(255, 250, 240, 0.82);
 }
 
 .study-rings {
@@ -940,6 +981,11 @@ svg {
   font-size: 1.1rem;
 }
 
+.resume-item ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
 @keyframes petalFall {
   0% {
     transform: translate3d(0, -8vh, 0) rotate(var(--rotate));
@@ -1102,6 +1148,15 @@ svg {
   .study-card,
   .resume-panel {
     padding: 24px;
+  }
+
+  .experience-heading {
+    display: grid;
+    gap: 8px;
+  }
+
+  .experience-meta {
+    text-align: left;
   }
 
   .project-top strong {

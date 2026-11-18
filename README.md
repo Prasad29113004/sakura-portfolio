@@ -1,7 +1,9 @@
 # Sakura Portfolio
 
-Animated Japanese-inspired portfolio website featuring certifications, learning
-progress, projects, skills, resume, and contact information.
+Animated Japanese-inspired portfolio website for an aspiring Network &
+Infrastructure Engineer, featuring enterprise networking, IT infrastructure,
+systems administration, certifications, learning, projects, resume, and
+contact information.
 
 ## Run locally
 
@@ -33,6 +35,15 @@ the push.
 6. Save. Azure creates a GitHub Actions workflow and deploys the site.
 
 Every later push to `main` triggers a new Azure deployment automatically.
+
+## Portfolio direction
+
+The portfolio presents practical exposure to enterprise LAN networking, router
+and switch troubleshooting, ManageEngine Endpoint Central, Windows
+administration, Microsoft Outlook support, endpoint management, and IT
+infrastructure operations. Microsoft Azure Fundamentals (AZ-900) and GitHub
+Foundations are displayed as earned certifications, while Cisco CCNA is the
+current technical learning focus.
 
 ## Future updates
 
