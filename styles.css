@@ -879,12 +879,13 @@ svg {
 .email-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   min-width: 0;
 }
 
 .email-address {
   min-width: 0;
+  flex: 1 1 auto;
   overflow-wrap: anywhere;
   color: var(--sumi);
   font-size: 1.06rem;
@@ -900,27 +901,28 @@ svg {
 }
 
 .copy-email-button {
-  min-height: 38px;
+  width: 30px;
+  height: 30px;
   flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  padding: 0 11px;
+  padding: 0;
   border: 1px solid rgba(35, 117, 121, 0.34);
   border-radius: 8px;
   color: var(--teal);
   background: rgba(35, 117, 121, 0.08);
-  font: inherit;
-  font-size: 0.78rem;
-  font-weight: 900;
   cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  z-index: 3;
   transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
 }
 
 .copy-email-button svg {
   width: 16px;
   height: 16px;
+  flex: 0 0 16px;
   fill: currentColor;
 }
 
@@ -1251,12 +1253,12 @@ svg {
   }
 
   .email-actions {
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
   }
 
   .email-address {
-    width: 100%;
+    width: auto;
   }
 
   .site-footer {

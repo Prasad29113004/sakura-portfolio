@@ -94,18 +94,12 @@ skillTags.forEach((tag, index) => {
   tag.style.setProperty("--i", index);
 });
 
-const copyEmailButton = document.querySelector(".copy-email-button");
-
-async function copyText(text) {
-  if (navigator.clipboard && window.isSecureContext) {
-    await navigator.clipboard.writeText(text);
-    return true;
-  }
-
+function legacyCopyText(text) {
   const textArea = document.createElement("textarea");
   textArea.value = text;
   textArea.setAttribute("readonly", "");
   textArea.style.position = "fixed";
+  textArea.style.left = "-9999px";
   textArea.style.opacity = "0";
   document.body.appendChild(textArea);
   textArea.select();
@@ -122,10 +116,27 @@ async function copyText(text) {
   return copied;
 }
 
-if (copyEmailButton) {
+async function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch {
+      // Permission may be unavailable on some hosted or private contexts.
+    }
+  }
+
+  return legacyCopyText(text);
+}
+
+function initializeEmailCopy() {
+  const copyEmailButton = document.querySelector("#copy-email-button");
+  if (!copyEmailButton) {
+    return;
+  }
+
   const card = copyEmailButton.closest(".email-contact");
   const status = card?.querySelector(".copy-email-status");
-  const label = copyEmailButton.querySelector(".copy-email-label");
   let resetTimer;
 
   copyEmailButton.addEventListener("click", async () => {
@@ -140,23 +151,32 @@ if (copyEmailButton) {
       }
 
       copyEmailButton.classList.add("is-copied");
-      label.textContent = "Copied!";
-      status.textContent = "Email copied successfully!";
+      copyEmailButton.title = "Copied!";
+      copyEmailButton.setAttribute("aria-label", "Email address copied");
+      status.textContent = "Email copied!";
       status.classList.remove("is-error");
     } catch {
       copyEmailButton.classList.remove("is-copied");
-      label.textContent = "Try Again";
+      copyEmailButton.title = "Copy email address";
+      copyEmailButton.setAttribute("aria-label", "Copy email address prasadnimje200@gmail.com");
       status.textContent = "Copy unavailable. Please select the email address manually.";
       status.classList.add("is-error");
     }
 
     resetTimer = window.setTimeout(() => {
       copyEmailButton.classList.remove("is-copied");
-      label.textContent = "Copy Email";
+      copyEmailButton.title = "Copy email address";
+      copyEmailButton.setAttribute("aria-label", "Copy email address prasadnimje200@gmail.com");
       status.textContent = "";
       status.classList.remove("is-error");
-    }, 3000);
+    }, 2000);
   });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initializeEmailCopy);
+} else {
+  initializeEmailCopy();
 }
 
 window.addEventListener("scroll", updateScrollEffects, { passive: true });
